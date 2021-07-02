@@ -7,6 +7,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -18,7 +19,9 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 @Audited
-public class Movement {
+public class Movement implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @EmbeddedId
     private MovementPK id = new MovementPK();
 
