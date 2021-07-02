@@ -1,6 +1,7 @@
 package com.dio.santander.apimanagerpoints.models;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class AccessLevel {
     @Id
     private long id;

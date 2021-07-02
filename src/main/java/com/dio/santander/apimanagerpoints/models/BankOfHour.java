@@ -1,6 +1,7 @@
 package com.dio.santander.apimanagerpoints.models;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class BankOfHour {
     @EmbeddedId
     private BankOfHourPK id = new BankOfHourPK();
