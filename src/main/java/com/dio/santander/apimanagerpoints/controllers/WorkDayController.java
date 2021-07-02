@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/workdays")
+@RequestMapping("/api/v1/work_days")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class WorkDayController {
     private WorkDayService workDayService;

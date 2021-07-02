@@ -56,7 +56,7 @@ public class UserCategoryService {
         try {
             userCategoryRepository.deleteById(id);
         } catch (DataIntegrityViolationException e) {
-            throw new DataIntegrityException("Não é possível excluir uma jornada de trabalho que possui dependências");
+            throw new DataIntegrityException("Não é possível excluir uma categoria de usuário que possui dependências");
         }
     }
 
