@@ -28,5 +28,5 @@ public class BankOfHourDTO {
     @DecimalMax(value = "9999999999.99")
     private BigDecimal balanceOfHour;
     @NotNull
-    private UserCategory userCategory;
+    private UserCategoryDTO userCategory;
 }
