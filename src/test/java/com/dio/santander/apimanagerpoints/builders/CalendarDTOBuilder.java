@@ -16,7 +16,7 @@ public class CalendarDTOBuilder {
     private String description = "Calendar Description 01";
 
     @Builder.Default
-    private String specialDate = "03-07-2021 09:30:40";
+    private String specialDate = "2021-07-04T09:30:40";
 
     public CalendarDTO toCalendarDTO() {
         return new CalendarDTO(id, dateType, description, specialDate);

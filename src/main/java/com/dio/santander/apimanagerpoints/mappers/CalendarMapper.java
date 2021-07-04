@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface CalendarMapper {
     CalendarMapper INSTANCE = Mappers.getMapper(CalendarMapper.class);
 
-    @Mapping(target = "specialDate", source = "specialDate", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "specialDate", source = "specialDate", dateFormat = "yyyy-MM-ddTHH:mm:ss")
     Calendar toModel(CalendarDTO calendarDTO);
 
     CalendarDTO toDto(Calendar calendar);
