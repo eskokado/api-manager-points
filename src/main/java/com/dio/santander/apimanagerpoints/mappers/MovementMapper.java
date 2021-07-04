@@ -10,8 +10,8 @@ import org.mapstruct.factory.Mappers;
 public interface MovementMapper {
     MovementMapper INSTANCE = Mappers.getMapper(MovementMapper.class);
 
-    @Mapping(target = "dateOfIn", source = "dateOfIn", dateFormat = "dd-MM-yyyy HH:mm:ss")
-    @Mapping(target = "dateOfOut", source = "dateOfOut", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "dateOfIn", source = "dateOfIn", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "dateOfOut", source = "dateOfOut", dateFormat = "dd-MM-yyyy HH:mm:ss")
     Movement toModel(MovementDTO movementDTO);
 
     MovementDTO toDto(Movement movement);

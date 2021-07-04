@@ -22,9 +22,9 @@ public class MovementDTOBuilder {
     @Builder.Default
     private MovementPK id = new MovementPK();
     @Builder.Default
-    private String dateOfIn = "03-07-2021 11:20:15";
+    private String dateOfIn = "2021-07-03T11:20:15";
     @Builder.Default
-    private String dateOfOut = "03-07-2021 13:20:15";
+    private String dateOfOut = "2021-07-03T13:20:15";
     @Builder.Default
     private BigDecimal period = BigDecimal.valueOf(3.5);
     @Builder.Default
