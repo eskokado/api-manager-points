@@ -10,8 +10,8 @@ import org.mapstruct.factory.Mappers;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    @Mapping(target = "workDayStart", source = "workDayStart", dateFormat = "dd-MM-yyyy HH:mm:ss")
-    @Mapping(target = "workDayFinal", source = "workDayFinal", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "workDayStart", source = "workDayStart", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "workDayFinal", source = "workDayFinal", dateFormat = "dd-MM-yyyy HH:mm:ss")
     User toModel(UserDTO userDTO);
 
     UserDTO toDto(User user);

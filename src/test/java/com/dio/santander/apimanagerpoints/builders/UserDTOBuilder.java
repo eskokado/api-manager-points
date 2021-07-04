@@ -21,9 +21,9 @@ public class UserDTOBuilder {
     @Builder.Default
     private BigDecimal tolerance = BigDecimal.valueOf(5.5);
     @Builder.Default
-    private String workDayStart = "03-07-2021 11:00:45";
+    private String workDayStart = "2021-07-04T11:00:45";
     @Builder.Default
-    private String workDayFinal = "03-07-2021 13:00:00";
+    private String workDayFinal = "2021-07-04T13:00:00";
 
     public UserDTO toUserDTO() {
         return new UserDTO(
