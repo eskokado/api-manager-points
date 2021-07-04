@@ -10,7 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface BankOfHourMapper {
     BankOfHourMapper INSTANCE = Mappers.getMapper(BankOfHourMapper.class);
 
-    @Mapping(target = "dateWorked", source = "dateWorked", dateFormat = "dd-MM-yyyy HH:mm:ss")
+//    @Mapping(target = "dateWorked", source = "dateWorked", dateFormat = "dd-MM-yyyy HH:mm:ss")
     BankOfHour toModel(BankOfHourDTO bankOfHourDTO);
 
     BankOfHourDTO toDto(BankOfHour bankOfHour);

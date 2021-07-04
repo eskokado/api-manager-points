@@ -11,7 +11,7 @@ public class BankOfHourDTOBuilder {
     @Builder.Default
     private BankOfHourPK id = new BankOfHourPK();
     @Builder.Default
-    private String dateWorked = "03-07-2021 13:00:00";
+    private String dateWorked = "2021-07-04T13:00:00";
     @Builder.Default
     private BigDecimal amountOfHour = BigDecimal.valueOf(1500.99);
     @Builder.Default
