@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/usercategories")
+@RequestMapping("/api/v1/user_categories")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class UserCategoryController {
     private UserCategoryService userCategoryService;
