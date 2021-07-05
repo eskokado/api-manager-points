@@ -9,8 +9,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -33,10 +35,15 @@ public class BankOfHourController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<BankOfHourDTO> insert(@RequestBody @Valid BankOfHourDTO objDto) {
         objDto = bankOfHourService.insert(objDto);
-        return ResponseEntity.ok(objDto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/pk?bankOfHourId={bankOfHourId}&movementId={movementId}&userId={userId}")
+                .buildAndExpand(
+                        objDto.getId().getBankOfHourId(),
+                        objDto.getId().getMovementId(),
+                        objDto.getId().getUserId()).toUri();
+        return ResponseEntity.created(uri).body(objDto);
     }
 
     @PutMapping
