@@ -50,7 +50,6 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 
 Abaixo, seguem links bem bacanas, sobre tópicos mencionados durante a aula:
 
-* [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
 * [Referência do Intellij IDEA Community, para download](https://www.jetbrains.com/idea/download)
 * [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 * [Site oficial do Spring](https://spring.io/)
