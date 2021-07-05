@@ -5,11 +5,12 @@ import com.dio.santander.apimanagerpoints.services.MovementService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -29,10 +30,11 @@ public class MovementController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<MovementDTO> insert(@RequestBody @Valid MovementDTO objDto) {
         objDto = movementService.insert(objDto);
-        return ResponseEntity.ok(objDto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/pk?movementId={movementId}&userId={userId}").buildAndExpand(objDto.getId().getMovementId(), objDto.getId().getUserId()).toUri();
+        return ResponseEntity.created(uri).body(objDto);
     }
 
     @PutMapping
